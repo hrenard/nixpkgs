@@ -73,7 +73,7 @@ new_version = old_version
 # This corresponds to the Updates tab in the web UI. See also
 # https://github.com/Lidarr/Lidarr/blob/350860e524029b7fb4165ed14fbcabb11217ada2/src/NzbDrone.Core/Update/UpdatePackageProvider.cs
 version_update = requests.get(
-    f"https://lidarr.servarr.com/v1/update/master?version={old_version}&includeMajorVersion=true",
+    f"https://lidarr.servarr.com/v1/update/develop?version={old_version}&includeMajorVersion=true",
 ).json()
 if version_update["available"]:
     new_version = version_update["updatePackage"]["version"]
